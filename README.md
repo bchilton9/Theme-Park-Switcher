@@ -63,8 +63,8 @@ Each file dynamically imports the correct theme from the Theme.park CDN.
 ### 🔨 Option 2: Clone It
 
 ```bash
-git clone https://github.com/yourname/themepark-switcher.git
-cd themepark-switcher
+git clone https://github.com/yourname/theme-park-switcher.git
+cd theme-park-switcher
 ```
 
 Then:
@@ -98,7 +98,6 @@ Make sure it:
 - Begins with `#!/command/with-contenv bash`
 - Is executable (`chmod +x scripts/99-themepark-npm`)
 
-—
 
 #### 📦 2. Mount it into the container
 
