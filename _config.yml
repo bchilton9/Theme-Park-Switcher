@@ -1,2 +1,14 @@
 # one line controls every app:
-current_theme: dracula        #  ← change this to nord, dark, hotpink, etc.
+current_theme: hotpink
+# Available Theme.park Themes:
+# - aquamarine
+# - dark
+# - dracula
+# - hotline
+# - hotpink
+# - maroon
+# - nord
+# - organizr
+# - overseerr
+# - plex
+# - space-gray

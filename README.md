@@ -80,6 +80,67 @@ Then:
 
 > Full list: see all `.scss` files in the repo
 
+
+## 🧩 Nginx Proxy Manager Integration (with Theme.park Mod Script)
+
+You can theme **Nginx Proxy Manager** using this GitHub-hosted switcher and a single startup script.
+
+
+#### 🛠 1. Add the patched script
+
+Save the modified script as:
+
+```
+scripts/99-themepark-npm
+```
+
+Make sure it:
+- Begins with `#!/command/with-contenv bash`
+- Is executable (`chmod +x scripts/99-themepark-npm`)
+
+—
+
+#### 📦 2. Mount it into the container
+
+In your `docker-compose.yml`, add this to the `volumes:` section of your NPM service:
+
+```yaml
+volumes:
+  - ./scripts/99-themepark-npm:/etc/cont-init.d/99-themepark-npm
+```
+
+> This causes the script to run automatically at container start.
+
+
+#### ⚙️ 3. Add the environment variables
+
+In the same `docker-compose.yml` section:
+
+```yaml
+environment:
+  - TP_SCHEME=https
+  - TP_DOMAIN=yourname.github.io
+  - TP_THEME=nginx-proxy-manager
+```
+
+#### 🔁 4. Change themes globally
+
+To change the look of NPM (and all other apps), just update the `_config.yml` in this repo:
+
+```yaml
+current_theme: nord  # or dracula, hotpink, etc.
+```
+
+Push your changes, and the updated CSS will auto-load at:
+```
+https://yourname.github.io/nginx-proxy-manager.css
+```
+
+#### ✅ That’s it!
+
+No need to ever touch the container again — just change the theme in one place and NPM updates instantly.
+
+
 ## 📜 License
 
 MIT – free to use and modify. Not affiliated with theme.park or any of the apps.

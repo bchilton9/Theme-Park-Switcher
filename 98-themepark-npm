@@ -1,0 +1,44 @@
+#!/command/with-contenv bash
+
+echo '--------------------------------------'
+echo '| Nginx Proxy Manager theme.park Mod |'
+echo '--------------------------------------'
+
+if [[ -d "/app/frontend" ]]; then
+    APP_FILEPATH='/app/frontend/' # jc21/nginx-proxy-manager
+else
+    APP_FILEPATH='/opt/nginx-proxy-manager/frontend/' # jlesage/nginx-proxy-manager
+fi
+
+echo -e "Variables set:\\n\
+APP_FILEPATH=${APP_FILEPATH}\\n\
+TP_DOMAIN=${TP_DOMAIN}\\n\
+TP_THEME=${TP_THEME}\\n\
+TP_SCHEME=${TP_SCHEME}\\n"
+
+if [[ -z ${TP_DOMAIN} ]]; then
+    echo 'No domain set, defaulting to theme-park.dev'
+    TP_DOMAIN='theme-park.dev'
+fi
+if [[ -z ${TP_SCHEME} ]]; then
+    TP_SCHEME='https'
+fi
+if [[ -z ${TP_THEME} ]]; then
+    TP_THEME='nginx-proxy-manager'
+fi
+
+# Single CSS injection (GitHub version)
+sed_file() {
+    sed -i "s/<\\/head>/<link rel='stylesheet' href='${TP_SCHEME}:\/\/${TP_DOMAIN}\/${TP_THEME}.css'><\/head>/" "$1"
+    echo "Injected stylesheet into $1"
+}
+
+# Only inject if not already present
+if ! grep -q "${TP_DOMAIN}/${TP_THEME}.css" "${APP_FILEPATH}/index.html"; then
+    echo '---------------------------------------'
+    echo '| Adding the stylesheet to html files |'
+    echo '---------------------------------------'
+    find "${APP_FILEPATH}" -type f -iname "*.html" | while read -r fname; do
+        sed_file "$fname"
+    done
+fi
