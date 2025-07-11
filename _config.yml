@@ -12,3 +12,8 @@ current_theme: aquamarine
 # - overseerr
 # - plex
 # - space-gray
+#
+# github repo theme. Not required for the theme park switcher
+remote_theme: bchilton9/chilsoft-theme
+plugins:
+  - jekyll-remote-theme
