@@ -1,3 +1,8 @@
+remote_theme: bchilton9/chilsoft-theme
+plugins:
+  - jekyll-remote-theme
+# github repo theme above. Not required for the theme park switcher
+#
 # one line controls every app:
 current_theme: aquamarine
 # Available Theme.park Themes:
@@ -12,8 +17,3 @@ current_theme: aquamarine
 # - overseerr
 # - plex
 # - space-gray
-#
-# github repo theme. Not required for the theme park switcher
-remote_theme: bchilton9/chilsoft-theme
-plugins:
-  - jekyll-remote-theme
