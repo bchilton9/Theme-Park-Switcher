@@ -4,6 +4,7 @@ This repo lets you control the visual theme for **all your self-hosted apps** us
 
 Rather than updating every proxy or app manually, this setup lets you change the global theme across 50+ services — just by editing a single file in GitHub.
 
+___
 
 ## 🚀 Features
 
@@ -13,6 +14,7 @@ Rather than updating every proxy or app manually, this setup lets you change the
 - ✅ Automatically generates `*.css` for each app
 - ✅ No custom scripting or build step required
 
+___
 
 ## 🌐 Live Demo
 
@@ -24,6 +26,7 @@ Theme CSS endpoints (examples):
 
 Each file dynamically imports the correct theme from the Theme.park CDN.
 
+___
 
 ## 🛠 How It Works
 
@@ -38,6 +41,8 @@ Each file dynamically imports the correct theme from the Theme.park CDN.
    ```
 
 3. GitHub Pages builds each SCSS file into a proper `.css` endpoint (e.g. `/sonarr.css`).
+
+___
 
 ## 🔁 How to Use
 
@@ -73,6 +78,7 @@ Then:
 - Push to GitHub
 - GitHub Pages handles the rest
 
+___
 
 ## 🧰 Supported Apps
 
@@ -80,6 +86,7 @@ Then:
 
 > Full list: see all `.scss` files in the repo
 
+___
 
 ## 🧩 Nginx Proxy Manager Integration (with Theme.park Mod Script)
 
@@ -134,23 +141,31 @@ Push your changes, and the updated CSS will auto-load at:
 ```
 https://yourname.github.io/nginx-proxy-manager.css
 ```
+___
 
 #### ✅ That’s it!
 
 No need to ever touch the container again — just change the theme in one place and NPM updates instantly.
 
+___
 
 ## 📜 License
 
 MIT – free to use and modify. Not affiliated with theme.park or any of the apps.
 
+___
+
 ## 🙌 Credits
 
 Based on the incredible work of [theme.park](https://theme-park.dev).
 
+___
+
 ## 🛠 Made By
 
 [ChilSoft.com](https://chilsoft.com) with caffeine and questionable commits.
+
+___
 
 ## ⚠️ Disclaimer
 
