@@ -1,3 +1,7 @@
+![License](https://img.shields.io/github/license/bchilton9/Theme-Park-Switcher)
+![Last Commit](https://img.shields.io/github/last-commit/bchilton9/Theme-Park-Switcher)
+![Styled with CSS](https://img.shields.io/badge/Styled%20with-CSS-264de4?logo=css3&logoColor=white)
+
 # 🎨 Theme.park Switcher
 
 This repo lets you control the visual theme for **all your self-hosted apps** using [Theme.park](https://theme-park.dev), with **one line of configuration**.
