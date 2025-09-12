@@ -4,7 +4,7 @@ plugins:
 # github repo theme above. Not required for the theme park switcher
 #
 # one line controls every app:
-current_theme: aquamarine
+current_theme: overseerr
 # Available Theme.park Themes:
 # - aquamarine
 # - dark
