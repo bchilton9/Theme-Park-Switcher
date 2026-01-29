@@ -72,7 +72,7 @@ ___
 ### 🔨 Option 2: Clone It
 
 ```bash
-git clone https://github.com/yourname/theme-park-switcher.git
+git clone https://github.com/bchilton9/theme-park-switcher.git
 cd theme-park-switcher
 ```
 
