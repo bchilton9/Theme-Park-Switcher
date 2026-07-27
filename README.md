@@ -24,9 +24,9 @@ ___
 
 Theme CSS endpoints (examples):
 
-- [`/sonarr.css`](https://themepark.chilsoft.com/sonarr.css)
-- [`/radarr.css`](https://themepark.chilsoft.com/radarr.css)
-- [`/jellyfin.css`](https://themepark.chilsoft.com/jellyfin.css)
+- [`/sonarr.css`](https://bchilton9.github.io/Theme-Park-Switcher/sonarr.css)
+- [`/radarr.css`](https://bchilton9.github.io/Theme-Park-Switcher/radarr.css)
+- [`/jellyfin.css`](https://bchilton9.github.io/Theme-Park-Switcher/jellyfin.css)
 
 Each file dynamically imports the correct theme from the Theme.park CDN.
 
